@@ -1,86 +1,124 @@
-import React from 'react'
-
+import React from "react";
 
 export default function App() {
-return (
-<div className="page">
-<header className="header">
-<div className="brand">YourName</div>
-<nav className="nav">
-<a href="#about">About</a>
-<a href="#projects">Projects</a>
-<a href="#skills">Skills</a>
-<a className="btn" href="#contact">Contact</a>
-</nav>
-</header>
+  return (
+    <div className="page">
 
-<section className="hero">
-<div className="hero-left">
-<h1>Hi — I'm <span className="accent">YourName</span></h1>
-<p className="lead">I build fast, accessible user experiences with React. I focus on clean UI, performance and accessibility.</p>
-<div className="actions">
-<a className="primary" href="#projects">See my work</a>
-<a className="ghost" href="/resume.pdf" target="_blank" rel="noreferrer">Download CV</a>
-</div>
-</div>
-<aside className="hero-right">
-<img src="/profile.jpg" alt="Your profile" className="avatar" />
-<div className="meta">Location • Manila, PH</div>
-</aside>
-</section>
+      {/* ───── NAVBAR ───── */}
+      <header className="nav">
+        <div className="logo">Portfolio.</div>
+        <nav className="menu">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#projects">Portfolio</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
 
-<main className="container">
-<section id="about" className="card">
-<h2>About</h2>
-<p>I'm a frontend developer who loves turning ideas into accessible, responsive interfaces. My stack: React, Vite, modern CSS.</p>
-</section>
+      {/* ───── HERO SECTION ───── */}
+      <section id="home" className="hero">
+        <div className="hero-left">
+          <h3>Hello, It's Me</h3>
+          <h1>Reagan Gabutelo</h1>
+          <h2>And I'm a <span className="accent">Frontend Developer</span></h2>
+          <p>
+            I build fast, accessible user experiences with React. I focus on clean UI,
+            performance and accessibility.
+          </p>
 
-<section id="projects" className="card">
-<h2>Selected Projects</h2>
-<div className="grid">
-<article className="project">
-<h3>Project Alpha</h3>
-<p>React app with Vite, built with attention to performance.</p>
-<div className="links"><a href="#">Live</a> · <a href="#">Repo</a></div>
-</article>
+          <div className="socials">
+            <a href="https://www.facebook.com/reagan.delatorre.10">FB</a>
+            <a href="#">IG</a>
+          </div>
 
+          <a className="btn-primary" href="/resume.pdf" target="_blank">
+            Download CV
+          </a>
+        </div>
 
-<article className="project">
-<h3>Project Beta</h3>
-<p>E‑commerce UI with accessibility-first approach.</p>
-<div className="links"><a href="#">Live</a> · <a href="#">Repo</a></div>
-</article>
+        <div className="hero-right">
+          <div className="image-glow">
+            <img src="/profile.jpg" alt="Profile" />
+          </div>
+        </div>
+      </section>
 
+      {/* ───── ABOUT SECTION ───── */}
+      <section id="about" className="about">
+        <div className="about-img">
+          <div className="image-glow">
+            <img src="/profile.jpg" alt="About" />
+          </div>
+        </div>
 
-<article className="project">
-<h3>Project Gamma</h3>
-<p>Mobile-first, responsive web application.</p>
-<div className="links"><a href="#">Live</a> · <a href="#">Repo</a></div>
-</article>
-</div>
-</section>
+        <div className="about-text">
+          <h2>About <span className="accent">Me</span></h2>
+          <h3>Frontend Developer!</h3>
+          <p>
+            I'm a frontend developer who loves turning ideas into accessible,
+            responsive interfaces. My stack: React, Vite, modern CSS.
+          </p>
+          <a className="btn-secondary" href="#projects">Read More</a>
+        </div>
+      </section>
 
+      {/* ───── SERVICES SECTION ───── */}
+      <section id="services" className="services">
+        <h2>My <span className="accent">Skills</span></h2>
 
-<section id="skills" className="card">
-<h2>Skills</h2>
-<ul className="skills">
-<li>React + Vite</li>
-<li>JavaScript / TypeScript</li>
-<li>HTML & CSS (Tailwind optional)</li>
-<li>Accessibility (a11y)</li>
-<li>Git & CI / Deployment</li>
-</ul>
-</section>
+        <div className="service-grid">
+          <div className="service-card">
+            <h3>Web Development</h3>
+            <p>Building modern, responsive UIs with React + Vite.</p>
+            <a href="#">Learn More</a>
+          </div>
 
+          <div className="service-card">
+            <h3>Graphic Design</h3>
+            <p>Clean & modern designs for brands and websites.</p>
+            <a href="#">Learn More</a>
+          </div>
 
-<section id="contact" className="card">
-<h2>Contact</h2>
-<p>Send an email: <a href="mailto:hello@yourname.com">hello@yourname.com</a></p>
-</section>
-</main>
+          <div className="service-card">
+            <h3>Digital Marketing</h3>
+            <p>Helping brands grow through digital strategies.</p>
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+      </section>
 
+      {/* ───── PORTFOLIO SECTION ───── */}
+      <section id="projects" className="projects">
+        <h2>Latest <span className="accent">Project</span></h2>
 
-<footer className="footer">© {new Date().getFullYear()} YourName — Built with React + Vite</footer>
-</div>
-)
+        <div className="project-grid">
+          <img src="/p1.jpg" alt="Project 1" />
+          <img src="/p2.jpg" alt="Project 2" />
+          <img src="/p3.jpg" alt="Project 3" />
+          <img src="/p4.jpg" alt="Project 4" />
+          <img src="/p5.jpg" alt="Project 5" />
+          <img src="/p6.jpg" alt="Project 6" />
+        </div>
+      </section>
+
+      {/* ───── CONTACT SECTION ───── */}
+      <section id="contact" className="contact">
+        <h2>Contact <span className="accent">Me!</span></h2>
+
+        <form className="contact-form">
+          <input type="text" placeholder="Your Name" />
+          <input type="email" placeholder="Your Email" />
+          <input type="text" placeholder="Subject" />
+          <textarea placeholder="Your Message"></textarea>
+          <button className="btn-primary">Send Message</button>
+        </form>
+      </section>
+
+      {/* ───── FOOTER ───── */}
+      <footer className="footer">
+        © {new Date().getFullYear()} YourName — All Rights Reserved.
+      </footer>
+    </div>
+  );
 }
